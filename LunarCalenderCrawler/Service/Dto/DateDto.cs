@@ -21,8 +21,12 @@ namespace LunarCalenderCrawler.Service.Dto
 
         public int LunarDay { get; set; }
 
+        public DateDto()
+        {
+        }
+
         public DateDto(int year, int month, int day,
-            int lunarYear, int lunarMonth, int lunarDay)
+            int lunarYear, int lunarMonth, int lunarDay,int week)
         {
             this.Year = year;
             this.Month = month;
@@ -30,6 +34,7 @@ namespace LunarCalenderCrawler.Service.Dto
             this.LunarYear = lunarYear;
             this.LunarMonth = lunarMonth;
             this.LunarDay = lunarDay;
+            this.Week = week;
         }
     }
 }
