@@ -8,6 +8,8 @@ namespace LunarCalenderCrawler.Service
 {
     public interface ILunarService
     {
-        IList<DateDto> GetCalenderAsync(int year, int month, int dat);
+        Task<IList<DateDto>> GetCalenderAsync(int year, int month);
+
+        IList<DateDto> Covert(string html);
     }
 }

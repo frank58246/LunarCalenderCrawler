@@ -14,6 +14,6 @@ namespace LunarCalenderCrawler.Repository
         /// <param name="month"></param>
         /// <param name="day"></param>
         /// <returns></returns>
-        Task<string> GetHtmlAsync(int year, int month, int day);
+        Task<string> GetHtmlAsync(int year, int month);
     }
 }

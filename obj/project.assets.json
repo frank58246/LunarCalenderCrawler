@@ -8,19 +8,19 @@
     ".NETCoreApp,Version=v3.1": []
   },
   "packageFolders": {
-    "C:\\Users\\frank\\.nuget\\packages\\": {}
+    "C:\\Users\\Frank\\.nuget\\packages\\": {}
   },
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "D:\\Project\\LunarCalenderCrawler\\LunarCalenderCrawler\\LunarCalenderCrawler.csproj",
+      "projectUniqueName": "E:\\Projects\\LunarCalenderCrawler\\LunarCalenderCrawler.csproj",
       "projectName": "LunarCalenderCrawler",
-      "projectPath": "D:\\Project\\LunarCalenderCrawler\\LunarCalenderCrawler\\LunarCalenderCrawler.csproj",
-      "packagesPath": "C:\\Users\\frank\\.nuget\\packages\\",
-      "outputPath": "D:\\Project\\LunarCalenderCrawler\\LunarCalenderCrawler\\obj\\",
+      "projectPath": "E:\\Projects\\LunarCalenderCrawler\\LunarCalenderCrawler.csproj",
+      "packagesPath": "C:\\Users\\Frank\\.nuget\\packages\\",
+      "outputPath": "E:\\Projects\\LunarCalenderCrawler\\obj\\",
       "projectStyle": "PackageReference",
       "configFilePaths": [
-        "C:\\Users\\frank\\AppData\\Roaming\\NuGet\\NuGet.Config",
+        "C:\\Users\\Frank\\AppData\\Roaming\\NuGet\\NuGet.Config",
         "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
       ],
       "originalTargetFrameworks": [
@@ -63,7 +63,7 @@
             "privateAssets": "all"
           }
         },
-        "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\5.0.203\\RuntimeIdentifierGraph.json"
+        "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\5.0.101\\RuntimeIdentifierGraph.json"
       }
     }
   }
