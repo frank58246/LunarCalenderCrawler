@@ -5,6 +5,7 @@ using System.Collections.Generic;
 using System.Globalization;
 using System.Linq;
 using System.Text.RegularExpressions;
+using System.Threading;
 using System.Threading.Tasks;
 
 namespace LunarCalenderCrawler.Service
@@ -27,7 +28,7 @@ namespace LunarCalenderCrawler.Service
 
             // 取得每一天的日期
             var dayReg = @"DayInfoA\[\d+\]='【陽曆】(?<son>\d+年\d+月\d+日)" +
-                                    @"[^日]*【農曆】(?<lunar>\d+年\d+月\d+日)";
+                                    @"[^日]*【農曆】(?<lunar_year>\d+)年(?<lunar_month>\d+)月(?<lunar_day>\d+)日";
 
             var dateList = new List<DateDto>();
 
@@ -39,20 +40,16 @@ namespace LunarCalenderCrawler.Service
                 var son = match.Groups["son"].Value
                     .Replace("年", "-").Replace("月", "-").Replace("日", "");
 
-                var lunar = match.Groups["lunar"].Value
-                    .Replace("年", "-").Replace("月", "-").Replace("日", "");
-
                 var sonDate = DateTime.Parse(son);
-                var lunarDate = DateTime.Parse(lunar);
                 var oneDayDto = new DateDto()
                 {
                     Year = sonDate.Year,
                     Month = sonDate.Month,
                     Day = sonDate.Day,
                     Week = (int)sonDate.DayOfWeek,
-                    LunarYear = lunarDate.Year,
-                    LunarMonth = lunarDate.Month,
-                    LunarDay = lunarDate.Day
+                    LunarYear = int.Parse(match.Groups["lunar_year"].Value),
+                    LunarMonth = int.Parse(match.Groups["lunar_month"].Value),
+                    LunarDay = int.Parse(match.Groups["lunar_day"].Value),
                 };
 
                 dateList.Add(oneDayDto);
@@ -74,6 +71,7 @@ namespace LunarCalenderCrawler.Service
                 var html = await this._lunarRepository.GetHtmlAsync(year, mon);
                 var date = this.Covert(html);
                 dateList.AddRange(date);
+                Thread.Sleep(1000);
             }
 
             return dateList;

@@ -1,4 +1,6 @@
 ﻿using LunarCalenderCrawler.Repository;
+using LunarCalenderCrawler.Service;
+using LunarCalenderCrawler.Service.Dto;
 using Microsoft.AspNetCore.Mvc;
 using System;
 using System.Collections.Generic;
@@ -11,20 +13,20 @@ namespace LunarCalenderCrawler.Controllers
     [Route("[controller]")]
     public class CalenderController : ControllerBase
     {
-        private ILunarRepository lunarRepository;
+        private ILunarService _lunarService;
 
-        public CalenderController(ILunarRepository lunarRepository)
+        public CalenderController(ILunarService lunarService)
         {
-            this.lunarRepository = lunarRepository;
+            this._lunarService = lunarService;
         }
 
         [HttpGet]
-        public IEnumerable<string> Get()
+        public IEnumerable<DateDto> Get(int year, int month)
         {
-            var html = this.lunarRepository.GetHtmlAsync(1992, 5)
+            var dateList = this._lunarService.GetCalenderAsync(year, month)
                 .GetAwaiter().GetResult();
 
-            return new List<string>() { html };
+            return dateList;
         }
     }
 }
