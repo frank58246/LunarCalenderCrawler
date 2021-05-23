@@ -25,7 +25,6 @@ namespace LunarCalenderCrawler.Service
             html = reg.Replace(html, "");
             var dayReg = @"^DayInfoA\[[d]\]";
             var a = new Regex(dayReg);
-            var a = 0;
             return null;
         }
 
