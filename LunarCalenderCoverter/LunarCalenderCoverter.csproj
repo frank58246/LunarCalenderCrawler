@@ -1,0 +1,32 @@
+﻿<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+    <OutputType>Exe</OutputType>
+    <TargetFramework>netcoreapp3.1</TargetFramework>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <None Remove="2021.json" />
+    <None Remove="2022.json" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <Content Include="2021.json">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="2022.json">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+  </ItemGroup>
+
+  <ItemGroup>
+    <PackageReference Include="Newtonsoft.Json" Version="13.0.1" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <Page Include="2021.json" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\LunarCalenderCrawler\LunarCalenderCrawler.csproj" />
+  </ItemGroup>
+</Project>

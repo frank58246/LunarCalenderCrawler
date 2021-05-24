@@ -7,6 +7,8 @@ Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "LunarCalenderCrawler", "Lun
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "LunarCalenderCrawlerTests", "LunarCalenderCrawlerTests\LunarCalenderCrawlerTests.csproj", "{EC247005-594B-4372-93B9-66649420A8BB}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "LunarCalenderCoverter", "LunarCalenderCoverter\LunarCalenderCoverter.csproj", "{95641B93-6DFF-4F9A-B9AD-75A12DAC6C13}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -21,6 +23,10 @@ Global
 		{EC247005-594B-4372-93B9-66649420A8BB}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{EC247005-594B-4372-93B9-66649420A8BB}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{EC247005-594B-4372-93B9-66649420A8BB}.Release|Any CPU.Build.0 = Release|Any CPU
+		{95641B93-6DFF-4F9A-B9AD-75A12DAC6C13}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{95641B93-6DFF-4F9A-B9AD-75A12DAC6C13}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{95641B93-6DFF-4F9A-B9AD-75A12DAC6C13}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{95641B93-6DFF-4F9A-B9AD-75A12DAC6C13}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
