@@ -30,6 +30,8 @@ namespace LunarCalenderCoverter
             {
                 foreach (var item in dateList)
                 {
+                    // 1984 為甲子年
+                    item.LunarYear = (item.LunarYear - 1984) % 64;
                     file.WriteLine(item.ToString());
                 }
             }
